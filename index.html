@@ -1,7 +1,7 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
 root: .               # DON'T CHANGE THIS EITHER.  (THANK YOU.)
-carpentry: "SWC"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
+carpentry: "swc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
 venue: "Macquarie University, Sydney"        # brief name of host site without address (e.g., "Euphoric State University")
 address: "Active Learning Space, 21 Wally's Walk, Macquarie University"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "au"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
@@ -254,8 +254,8 @@ if page.carpentry == "swc"
 -->
 <h2 id="syllabus">Syllabus</h2>
 
-{% if page.carpentry == "swc" %}
-  {% include sc/syllabus.html %}
+if page.carpentry == "swc"
+  include sc/syllabus.html
 {% elsif page.carpentry == "dc" %}
   {% include dc/syllabus.html %}
 {% elsif page.carpentry == "lc" %}
